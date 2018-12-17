@@ -6,6 +6,8 @@ const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
 const validateRegisterInput  = require('../../validation/register');
 
+router.get('/test', (req, res) => res.json({ msg: 'Users Works' }));
+
 // @route   POST api/users/register
 // @desc    Register user
 // @access  Public
