@@ -3,6 +3,7 @@ const expect = chai.expect;
 
 const isEmpty = require('../validation/isEmpty');
 const validateRegisterInput  = require('../validation/register');
+const validateLoginInput  = require('../validation/login');
 
 //Test isEmpty module
 describe('isEmpty function test', () => {
@@ -84,4 +85,25 @@ describe('validateRegisterInput function test', () => {
         expect(validateRegisterInput(falseOjb2).errors.password2).to.equal('Passwords must match');
     });
     
+});
+
+//Test validateLoginInput function
+describe('validateRegisterInput function test', () => {
+    let correctData = {
+        email: 'test@test.com',
+        password: '1234567'
+    };
+    
+    it('should be valid', ()=>{
+        expect(validateLoginInput(correctData).isValid).to.be.true;
+    });
+
+    it('should return error with invalid email', ()=>{
+        expect(validateLoginInput({email: 'testtest', password: '1234567'}).errors.email).to.equal('Email is invalid');
+    });
+
+    it('should return error with password field required', ()=>{
+        expect(validateLoginInput({email: 'test@test.com', password: ''}).errors.password).to.equal('Password field is required');
+    });
+
 });
