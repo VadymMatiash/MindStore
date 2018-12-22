@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 
 const users = require('./routes/api/users');
+const acticles = require('./routes/api/articles');
 
 const app = express();
 
@@ -26,7 +27,10 @@ mongoose
     .catch(err => console.log(err));
 
 // Use Routes
+//app.route('/api/articles/').get(getArticles);
+
 app.use('/api/users', users);
+app.use('/api/articles', acticles);
 
 const port = process.env.PORT || 80;
 

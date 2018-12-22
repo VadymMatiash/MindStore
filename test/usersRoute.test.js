@@ -98,3 +98,9 @@ describe('/GET current', ()=> {
             });
     });
 });
+
+function getToken(){
+    return token;
+}
+
+module.exports = getToken;
