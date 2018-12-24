@@ -8,7 +8,15 @@ class News extends Component {
     super(props);
     this.state = {
       articles: [],
-    }
+      position: 0,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  };
+
+  handleClick(e){
+    let pos = e.target.innerHTML * 5;
+    this.setState({position: pos});
   }
 
   componentDidMount() {
@@ -17,26 +25,46 @@ class News extends Component {
 
         return response.json();
       })
-      .then((user) => {
-      this.setState({articles: user});
+      .then((data) => {
+      this.setState({articles: data});
 
       })
       .catch("Fail");
 
-    };
-
-  kek(){}
+  };
 
   render() {
+    
     let arr = this.state.articles.map((elem, i) =>{
       return (
-        <Article id = {elem.id} name = {elem.name} content = {elem.content} key = {elem.id}/>
+        <Article id = {elem.id} title = {elem.title} text = {elem.text} key = {elem.id} tests = {elem.tests} tags = {elem.tags}/>
       );
     });
+
+    let pages = Math.ceil(arr.length/5)
+
+    let generatePages = () => {
+     
+      let arrPages = [];
+      let i = 0;
+      while(i < pages){
+        arrPages.push((<div onClick = {this.handleClick} key = {i} className = "pageNum">{i}</div>));
+        i++;
+      }
+      return arrPages;
+    }
     
     return (
-        <div className="news">
-          {arr.length? arr:0}
+
+        <div>
+          <div>Total articles: {arr.length} </div>
+          <div className = "pagesContainer">{generatePages()}</div>
+
+          <div className="news">
+            
+            {arr.length? arr.splice(this.state.position, 5):"Loading..."}
+            
+          </div>
         </div>
 
     );
