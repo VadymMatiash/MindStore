@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Article extends Component {
 
 	display(){
-
 		let i = 0;
 		let arr = [];
 		while(i < this.props.tests.length){
@@ -35,7 +34,7 @@ class Article extends Component {
 
         	arr2 = answers.map((item, index) =>{
         		return (<div key = {index.toString()}  className = "news__tests">
-		    			<input name = {`name${i}`} type = {type}></input>{item}    		
+		    			<input name = {`name${i}`} type = {type}></input><span>{item}</span><br/>    		
 		    	</div>);
         	});
 
@@ -44,12 +43,45 @@ class Article extends Component {
         	i++;
       	}
 
-      	console.log(arr);
+      	arr.push((<button key = "" onClick = {this.sendTests} className = "btnSendTests">Send tests</button>));
+
       	return arr;	
+	}
+
+	sendTests(e){
+		let container = e.target.parentNode;
+
+		const results = [];
+
+		for(let i = 0; i < container.childNodes.length-1; i++){
+
+			const buf = [];
+
+			for(let j = 0; j < container.childNodes[i].childNodes.length; j++){
+				let elem = container.childNodes[i].childNodes[j].childNodes[0];
+				if(elem.checked){
+					buf.push(elem.nextElementSibling.innerHTML);
+				}
+			};
+
+			results.push(buf);
+		}
+
+		let xhr = new XMLHttpRequest();
+
+		xhr.open("POST", 'http://5be832ae8d650800131e2759.mockapi.io/results');
+		xhr.setRequestHeader("Content-type", "application/json");
+		xhr.onreadystatechange = function() {
+  			if (this.readyState != 4) return;
+		}
+
+		let data = JSON.stringify({"results": results});
+		//console.log(data);
+
+		xhr.send(data);
 	}
   	render() {
 
-  		console.log(this.props.tests);
 	    return (
 	        <div className="article">
 	        	<h3>{this.props.title}</h3>

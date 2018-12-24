@@ -21,6 +21,7 @@ class News extends Component {
 
   componentDidMount() {
     fetch('http://5be832ae8d650800131e2759.mockapi.io/articles')
+    //fetch('/api/articles')
     .then((response) => {
 
         return response.json();

@@ -37,10 +37,7 @@ class AddArticle extends Component {
 			return;
 		}
 
-		
-
 		let xhr = new XMLHttpRequest();
-
 
 		xhr.open("POST", 'http://5be832ae8d650800131e2759.mockapi.io/articles');
 		xhr.setRequestHeader("Content-type", "application/json");
