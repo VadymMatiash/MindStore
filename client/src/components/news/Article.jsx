@@ -50,6 +50,7 @@ class Article extends Component {
 
 	sendTests(e){
 		let container = e.target.parentNode;
+		let title = container.parentNode.childNodes[0].innerHTML;
 
 		const results = [];
 
@@ -75,7 +76,8 @@ class Article extends Component {
   			if (this.readyState != 4) return;
 		}
 
-		let data = JSON.stringify({"results": results});
+		let data = JSON.stringify({ "title": title,
+									"results": results});
 		//console.log(data);
 
 		xhr.send(data);
