@@ -16,6 +16,7 @@ class News extends Component {
 
   handleClick(e){
     let pos = e.target.innerHTML * 5;
+
     this.setState({position: pos});
   }
 
@@ -49,7 +50,7 @@ class News extends Component {
       let arrPages = [];
       let i = 0;
       while(i < pages){
-        arrPages.push((<div onClick = {this.handleClick} key = {i} className = "pageNum">{i}</div>));
+        arrPages.push((<div onClick = {this.handleClick} key = {i} className = "page gradient">{i}</div>));
         i++;
       }
       return arrPages;

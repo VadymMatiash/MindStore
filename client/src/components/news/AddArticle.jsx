@@ -46,15 +46,13 @@ class AddArticle extends Component {
   			if (this.readyState != 4) return;
 		}
 
-		let arrChk = document.getElementsByClassName("contTest");	
-		//const res = [];		
+		let arrChk = document.getElementsByClassName("contTest");		
 
 		const testsArr = [];
 		let i = 0;
 		while(i < arrChk.length){
 			let question = arrChk[i].childNodes[0].childNodes[0].value;
 			let type = arrChk[i].childNodes[1].childNodes[0].type;
-			//let results = [];
 
 			let objRes = {};
 			objRes.question = question;
@@ -65,9 +63,8 @@ class AddArticle extends Component {
 
 			let j = 1;
 
-			//results.push(question);
 		    while(j < arrChk[i].childNodes.length){
-		    	//console.log(arrChk[i].childNodes[j]);
+
 		    	let flag = arrChk[i].childNodes[j].childNodes[0].checked;
 		    	let input = arrChk[i].childNodes[j].childNodes[1].value;	
 
@@ -77,12 +74,11 @@ class AddArticle extends Component {
 		    		correctAnswers.push(input);
 		    	}
 		    	
-		    	/*let obj = {
-		    		flag: flag,
-		    		answer: input,
-		    	};
-				results.push(obj)*/	
 		    	j++;
+			}
+
+			if(correctAnswers.length == 0){
+				throw new Error("input correct data");
 			}
 
 			objRes.answers = answers;
@@ -90,19 +86,14 @@ class AddArticle extends Component {
 
 			testsArr.push(objRes);
 
-			//res.push(results);
-
 		    i++;
-		}
-
-		//console.log(testsArr);	
+		}	
 
 		let data = JSON.stringify({"title": nameArticle.value, 
 								   "text": contentArticle.value, 
 								   "tests": testsArr,
 								   "tags": tags
 								});
-		//console.log(data);
 
 		xhr.send(data);
 	}
