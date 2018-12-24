@@ -138,11 +138,11 @@ h2 {
 
 .content{
 	text-align: left;
-	padding-left: 200px;
+	padding-left: 150px;
 }
 
 .btnSendTests{	
-	margin: 30px 120px 0;
+	margin: 30px 150px 0;
 }
 
 .list {
@@ -164,4 +164,11 @@ h2 {
 .numTest{
 	color: #16a085;
 	font-size: 30px;
+}
+.pad{
+	padding-top: 40px;
+}
+
+.errorBlock{
+	color: red;
 }

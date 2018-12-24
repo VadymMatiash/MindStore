@@ -3,12 +3,9 @@ import React, { Component } from 'react';
 class Article extends Component {
 
 	displayTags(){
-		let i = 0;
-
 		const arr = this.props.tags.map((item, index) =>{
 			return (<div key = {`tags${index}`} className = "tags">{item}</div>)
 		});
-
 
 		return arr;
 	}

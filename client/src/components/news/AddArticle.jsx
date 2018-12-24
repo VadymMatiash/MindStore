@@ -9,6 +9,7 @@ class AddArticle extends Component {
     	};
 
     	this.createTest = this.createTest.bind(this);
+    	this.sendArticle = this.sendArticle.bind(this);
 	}
     
 	sendArticle() {
@@ -73,12 +74,22 @@ class AddArticle extends Component {
 		    	if(flag){
 		    		correctAnswers.push(input);
 		    	}
+
+		    	if(input === ""){
+		    		let error = document.getElementById("errorBlock");
+					error.className = "errorBlock";
+					error.innerHTML = "Enter questions and answers";
+					return;
+		    	}
 		    	
 		    	j++;
 			}
 
-			if(correctAnswers.length == 0){
-				throw new Error("input correct data");
+			if(correctAnswers.length == 0 || question === ""){
+				let error = document.getElementById("errorBlock");
+				error.className = "errorBlock";
+				error.innerHTML = "Enter questions and answers";
+				return;
 			}
 
 			objRes.answers = answers;
@@ -95,7 +106,12 @@ class AddArticle extends Component {
 								   "tags": tags
 								});
 
+		console.log('send data');
 		xhr.send(data);
+
+		window.location.href = "/news";
+		//this.props.history.push("/news");
+		
 	}
 
 	createTest(){
@@ -154,8 +170,6 @@ class AddArticle extends Component {
 		    }
 		}
 
-		console.log(arr);
-
 		let containerTest = document.getElementById("containerTests");
 
 		let divTest = document.createElement('div');
@@ -169,10 +183,7 @@ class AddArticle extends Component {
 		}
 		containerTest.appendChild(divTest);
 
-
 		this.setState({testId: this.state.testId + 1});
-
-		
 
 	}
 
@@ -190,7 +201,7 @@ class AddArticle extends Component {
 		        	<input type = "text" id = "tagsArticle"/>
 		        </div>
 
-		        <div className = "content">
+		        <div className = "pad">
 		        	Type content <br/>
 	        		<textarea className ="textarea" id = "contentArticle"/>
 	        	</div>
@@ -198,7 +209,6 @@ class AddArticle extends Component {
 	        	<div id = "containerTests">
 		        	Create test <br/>
 		        	
-
 		        	<label>How many answer choices?<input type ="number" id = "numFields"/></label> <br/>
 
 		        	<label>1 answer<input type ="radio" name = "radioTest" value = "opt1" id = "opt1"/></label> <br/>
@@ -209,11 +219,13 @@ class AddArticle extends Component {
 	        		</button> <br/>
 	        	</div>
 
-	        	<div className = "content">
-		        	<br/>
+	        	<div className = "pad">
+		        	
 	        		<button onClick = {this.sendArticle}>
 	        			Send article
 	        		</button>
+
+	        		<div id = "errorBlock"></div>
 	        	</div>
 
 	        </div>

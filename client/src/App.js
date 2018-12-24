@@ -18,8 +18,6 @@ import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 
 import Profile from './components/profile/Profile';
-import Posts from './components/posts/Posts';
-import Post from './components/post/Post';
 import News from './components/news/News';
 import AddArticle from './components/news/AddArticle';
 import NotFound from './components/not-found/NotFound';
@@ -65,13 +63,6 @@ class App extends Component {
               <Route exact path="/addarticle" component={AddArticle} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
-
-              <Switch>
-                <PrivateRoute exact path="/feed" component={Posts} />
-              </Switch>
-              <Switch>
-                <PrivateRoute exact path="/post/:id" component={Post} />
               </Switch>
               <Route exact path="/not-found" component={NotFound} />
             </div>
