@@ -60,6 +60,9 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     newArticle.save().then(article => res.json(article));
 });
 
+// @route   POST api/articles/:id
+// @desc    Solve test
+// @access  Private
 router.post('/:id', passport.authenticate('jwt', { session: false }), (req, res) =>{
     let score = 0;
 
