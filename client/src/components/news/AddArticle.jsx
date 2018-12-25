@@ -40,8 +40,10 @@ class AddArticle extends Component {
 
 		let xhr = new XMLHttpRequest();
 
-		xhr.open("POST", 'http://5be832ae8d650800131e2759.mockapi.io/articles');
+		//xhr.open("POST", 'http://5be832ae8d650800131e2759.mockapi.io/articles');
+		xhr.open("POST", '/api/articles');
 		xhr.setRequestHeader("Content-type", "application/json");
+		xhr.setRequestHeader("Authorization", localStorage.jwtToken);
 
 		xhr.onreadystatechange = function() {
   			if (this.readyState != 4) return;
@@ -109,7 +111,7 @@ class AddArticle extends Component {
 		console.log('send data');
 		xhr.send(data);
 
-		window.location.href = "/news";
+		//window.location.href = "/news";
 		//this.props.history.push("/news");
 		
 	}

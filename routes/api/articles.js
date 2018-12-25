@@ -22,6 +22,7 @@ router.get('/:id', getArticleById);
 // @desc    Create article
 // @access  Private
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+    console.log(req.body);
 
     const newArticle = new Article({
         title: req.body.title,

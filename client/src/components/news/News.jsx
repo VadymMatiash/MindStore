@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import ArticleDesc from './ArticleDesc';
 
 import './News.css';
 
@@ -21,8 +22,8 @@ class News extends Component {
   }
 
   componentDidMount() {
-    fetch('http://5be832ae8d650800131e2759.mockapi.io/articles')
-    //fetch('/api/articles')
+    //fetch('http://5be832ae8d650800131e2759.mockapi.io/articles')
+    fetch('/api/articles')
     .then((response) => {
 
         return response.json();
@@ -33,13 +34,17 @@ class News extends Component {
       })
       .catch("Fail");
 
+
+      //<Article id = {elem.id} title = {elem.title} text = {elem.text} key = {elem.id} tests = {elem.tests} tags = {elem.tags}/>
+
   };
 
   render() {
     
     let arr = this.state.articles.map((elem, i) =>{
       return (
-        <Article id = {elem.id} title = {elem.title} text = {elem.text} key = {elem.id} tests = {elem.tests} tags = {elem.tags}/>
+        
+        <ArticleDesc id = {elem._id} title = {elem.title} key = {elem.id} tags = {elem.tags}/>
       );
     });
 

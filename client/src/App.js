@@ -20,6 +20,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import Profile from './components/profile/Profile';
 import News from './components/news/News';
 import AddArticle from './components/news/AddArticle';
+import Article from './components/news/Article';
 import NotFound from './components/not-found/NotFound';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -59,8 +60,12 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
              
               <Route exact path="/profile/:handle" component={Profile} />
+              <Route exact path="/news/:id" component={Article} />
               <Route exact path="/news" component={News} />
-              <Route exact path="/addarticle" component={AddArticle} />
+
+              <Switch>
+                <PrivateRoute exact path="/addarticle" component={AddArticle} />
+              </Switch>
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>

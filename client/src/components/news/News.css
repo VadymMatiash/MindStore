@@ -172,3 +172,11 @@ h2 {
 .errorBlock{
 	color: red;
 }
+
+.true{
+	background: green;
+}
+
+.false{
+	background: red;
+}
