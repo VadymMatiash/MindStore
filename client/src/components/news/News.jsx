@@ -44,7 +44,7 @@ class News extends Component {
     let arr = this.state.articles.map((elem, i) =>{
       return (
         
-        <ArticleDesc id = {elem._id} title = {elem.title} key = {elem.id} tags = {elem.tags}/>
+        <ArticleDesc id = {elem._id} title = {elem.title} key = {elem.id} tags = {elem.tags} text={elem.text}/>
       );
     });
 

@@ -187,7 +187,7 @@ class Article extends Component {
 	        	<div className = "tagsContainer">{this.state.article.tags? this.displayTags():null}</div>
 	        	<h3>{this.state.article.title}</h3>
 	        	<div className = "content">{this.state.article.text}</div>
-	        	<div className = "content">{this.state.article.tests? this.displayTests():null}</div>
+	        	<div className = "content-tests">{this.state.article.tests? this.displayTests():null}</div>
 	        </div>
 
 	    );

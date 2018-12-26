@@ -21,11 +21,12 @@ class ArticleDesc extends Component{
 
 	    return (
 	        <div className="article">
-	        	<h3>{this.props.title}</h3>
-
-	        	<button onClick = {this.handleClick}>BTN</button>
-	        	<Link className="nav-link" to= {str}>
-            		Read more
+			{console.log(this.props)}
+				<h3>{this.props.title}</h3>
+				<p>{this.props.text.substring(0, 490)+'...'}</p>
+	        	{/* <button onClick = {this.handleClick}>BTN</button> */}
+	        	<Link className="art-link" to= {str}>
+            		<button>Read more -></button>
           		</Link>
 	        </div>
 
