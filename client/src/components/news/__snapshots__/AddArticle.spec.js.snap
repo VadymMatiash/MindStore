@@ -1,0 +1,1181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddArticle initial renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddArticle
+    sendArticle={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="addArticle__top"
+>
+          <div>
+                    Type name of article 
+                    <br />
+                    <input
+                              id="nameArticle"
+                              type="text"
+                    />
+          </div>
+          <div>
+                    Add tags separated by commas
+                    <br />
+                    <input
+                              id="tagsArticle"
+                              type="text"
+                    />
+          </div>
+</div>,
+        <div
+          className="pad"
+>
+          Type content 
+          <br />
+          <textarea
+                    className="textarea"
+                    id="contentArticle"
+          />
+</div>,
+        <div
+          id="containerTests"
+>
+          Create test 
+          <br />
+          <label
+                    className="d-flex j-space"
+          >
+                    How many answer choices?
+                    <input
+                              id="numFields"
+                              type="number"
+                    />
+          </label>
+           
+          <br />
+          <div
+                    className="d-flex label"
+          >
+                    <label
+                              className="label-test"
+                    >
+                              1 answer 
+                              <input
+                                        id="opt1"
+                                        name="radioTest"
+                                        type="radio"
+                                        value="opt1"
+                              />
+                    </label>
+                     
+                    <br />
+                    <label>
+                              &gt;1 answers 
+                              <input
+                                        id="opt2"
+                                        name="radioTest"
+                                        type="radio"
+                                        value="opt2"
+                              />
+                    </label>
+                     
+                    <br />
+          </div>
+          <button
+                    onClick={[Function]}
+          >
+                    Create test
+          </button>
+           
+          <br />
+</div>,
+        <div
+          className="pad"
+>
+          <button
+                    onClick={[Function]}
+          >
+                    Send article
+          </button>
+          <div
+                    id="errorBlock"
+          />
+</div>,
+      ],
+      "className": "addArticle",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              Type name of article 
+              <br />
+              <input
+                            id="nameArticle"
+                            type="text"
+              />
+</div>,
+            <div>
+              Add tags separated by commas
+              <br />
+              <input
+                            id="tagsArticle"
+                            type="text"
+              />
+</div>,
+          ],
+          "className": "addArticle__top",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Type name of article ",
+                <br />,
+                <input
+                  id="nameArticle"
+                  type="text"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Type name of article ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "nameArticle",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Add tags separated by commas",
+                <br />,
+                <input
+                  id="tagsArticle"
+                  type="text"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Add tags separated by commas",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "tagsArticle",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Type content ",
+            <br />,
+            <textarea
+              className="textarea"
+              id="contentArticle"
+/>,
+          ],
+          "className": "pad",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Type content ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "textarea",
+              "id": "contentArticle",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "textarea",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Create test ",
+            <br />,
+            <label
+              className="d-flex j-space"
+>
+              How many answer choices?
+              <input
+                            id="numFields"
+                            type="number"
+              />
+</label>,
+            " ",
+            <br />,
+            <div
+              className="d-flex label"
+>
+              <label
+                            className="label-test"
+              >
+                            1 answer 
+                            <input
+                                          id="opt1"
+                                          name="radioTest"
+                                          type="radio"
+                                          value="opt1"
+                            />
+              </label>
+               
+              <br />
+              <label>
+                            &gt;1 answers 
+                            <input
+                                          id="opt2"
+                                          name="radioTest"
+                                          type="radio"
+                                          value="opt2"
+                            />
+              </label>
+               
+              <br />
+</div>,
+            <button
+              onClick={[Function]}
+>
+              Create test
+</button>,
+            " ",
+            <br />,
+          ],
+          "id": "containerTests",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Create test ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "How many answer choices?",
+                <input
+                  id="numFields"
+                  type="number"
+/>,
+              ],
+              "className": "d-flex j-space",
+            },
+            "ref": null,
+            "rendered": Array [
+              "How many answer choices?",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "numFields",
+                  "type": "number",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="label-test"
+>
+                  1 answer 
+                  <input
+                                    id="opt1"
+                                    name="radioTest"
+                                    type="radio"
+                                    value="opt1"
+                  />
+</label>,
+                " ",
+                <br />,
+                <label>
+                  &gt;1 answers 
+                  <input
+                                    id="opt2"
+                                    name="radioTest"
+                                    type="radio"
+                                    value="opt2"
+                  />
+</label>,
+                " ",
+                <br />,
+              ],
+              "className": "d-flex label",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "1 answer ",
+                    <input
+                      id="opt1"
+                      name="radioTest"
+                      type="radio"
+                      value="opt1"
+/>,
+                  ],
+                  "className": "label-test",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "1 answer ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "id": "opt1",
+                      "name": "radioTest",
+                      "type": "radio",
+                      "value": "opt1",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "label",
+              },
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    ">1 answers ",
+                    <input
+                      id="opt2"
+                      name="radioTest"
+                      type="radio"
+                      value="opt2"
+/>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  ">1 answers ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "id": "opt2",
+                      "name": "radioTest",
+                      "type": "radio",
+                      "value": "opt2",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "label",
+              },
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Create test",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Create test",
+            "type": "button",
+          },
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              onClick={[Function]}
+>
+              Send article
+</button>,
+            <div
+              id="errorBlock"
+/>,
+          ],
+          "className": "pad",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Send article",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Send article",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "errorBlock",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="addArticle__top"
+>
+            <div>
+                        Type name of article 
+                        <br />
+                        <input
+                                    id="nameArticle"
+                                    type="text"
+                        />
+            </div>
+            <div>
+                        Add tags separated by commas
+                        <br />
+                        <input
+                                    id="tagsArticle"
+                                    type="text"
+                        />
+            </div>
+</div>,
+          <div
+            className="pad"
+>
+            Type content 
+            <br />
+            <textarea
+                        className="textarea"
+                        id="contentArticle"
+            />
+</div>,
+          <div
+            id="containerTests"
+>
+            Create test 
+            <br />
+            <label
+                        className="d-flex j-space"
+            >
+                        How many answer choices?
+                        <input
+                                    id="numFields"
+                                    type="number"
+                        />
+            </label>
+             
+            <br />
+            <div
+                        className="d-flex label"
+            >
+                        <label
+                                    className="label-test"
+                        >
+                                    1 answer 
+                                    <input
+                                                id="opt1"
+                                                name="radioTest"
+                                                type="radio"
+                                                value="opt1"
+                                    />
+                        </label>
+                         
+                        <br />
+                        <label>
+                                    &gt;1 answers 
+                                    <input
+                                                id="opt2"
+                                                name="radioTest"
+                                                type="radio"
+                                                value="opt2"
+                                    />
+                        </label>
+                         
+                        <br />
+            </div>
+            <button
+                        onClick={[Function]}
+            >
+                        Create test
+            </button>
+             
+            <br />
+</div>,
+          <div
+            className="pad"
+>
+            <button
+                        onClick={[Function]}
+            >
+                        Send article
+            </button>
+            <div
+                        id="errorBlock"
+            />
+</div>,
+        ],
+        "className": "addArticle",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                Type name of article 
+                <br />
+                <input
+                                id="nameArticle"
+                                type="text"
+                />
+</div>,
+              <div>
+                Add tags separated by commas
+                <br />
+                <input
+                                id="tagsArticle"
+                                type="text"
+                />
+</div>,
+            ],
+            "className": "addArticle__top",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Type name of article ",
+                  <br />,
+                  <input
+                    id="nameArticle"
+                    type="text"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Type name of article ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "nameArticle",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Add tags separated by commas",
+                  <br />,
+                  <input
+                    id="tagsArticle"
+                    type="text"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Add tags separated by commas",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "tagsArticle",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Type content ",
+              <br />,
+              <textarea
+                className="textarea"
+                id="contentArticle"
+/>,
+            ],
+            "className": "pad",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Type content ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "textarea",
+                "id": "contentArticle",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "textarea",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Create test ",
+              <br />,
+              <label
+                className="d-flex j-space"
+>
+                How many answer choices?
+                <input
+                                id="numFields"
+                                type="number"
+                />
+</label>,
+              " ",
+              <br />,
+              <div
+                className="d-flex label"
+>
+                <label
+                                className="label-test"
+                >
+                                1 answer 
+                                <input
+                                                id="opt1"
+                                                name="radioTest"
+                                                type="radio"
+                                                value="opt1"
+                                />
+                </label>
+                 
+                <br />
+                <label>
+                                &gt;1 answers 
+                                <input
+                                                id="opt2"
+                                                name="radioTest"
+                                                type="radio"
+                                                value="opt2"
+                                />
+                </label>
+                 
+                <br />
+</div>,
+              <button
+                onClick={[Function]}
+>
+                Create test
+</button>,
+              " ",
+              <br />,
+            ],
+            "id": "containerTests",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Create test ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "How many answer choices?",
+                  <input
+                    id="numFields"
+                    type="number"
+/>,
+                ],
+                "className": "d-flex j-space",
+              },
+              "ref": null,
+              "rendered": Array [
+                "How many answer choices?",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "numFields",
+                    "type": "number",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="label-test"
+>
+                    1 answer 
+                    <input
+                                        id="opt1"
+                                        name="radioTest"
+                                        type="radio"
+                                        value="opt1"
+                    />
+</label>,
+                  " ",
+                  <br />,
+                  <label>
+                    &gt;1 answers 
+                    <input
+                                        id="opt2"
+                                        name="radioTest"
+                                        type="radio"
+                                        value="opt2"
+                    />
+</label>,
+                  " ",
+                  <br />,
+                ],
+                "className": "d-flex label",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "1 answer ",
+                      <input
+                        id="opt1"
+                        name="radioTest"
+                        type="radio"
+                        value="opt1"
+/>,
+                    ],
+                    "className": "label-test",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "1 answer ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "id": "opt1",
+                        "name": "radioTest",
+                        "type": "radio",
+                        "value": "opt1",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "label",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      ">1 answers ",
+                      <input
+                        id="opt2"
+                        name="radioTest"
+                        type="radio"
+                        value="opt2"
+/>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    ">1 answers ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "id": "opt2",
+                        "name": "radioTest",
+                        "type": "radio",
+                        "value": "opt2",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "label",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Create test",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Create test",
+              "type": "button",
+            },
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                onClick={[Function]}
+>
+                Send article
+</button>,
+              <div
+                id="errorBlock"
+/>,
+            ],
+            "className": "pad",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Send article",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Send article",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "errorBlock",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -10,8 +10,7 @@ class ArticleDesc extends Component{
     }
 
 	handleClick(){
-		let id = this.props.id;
-  		let str = "/news/"+id;
+		console.log(this.props);
 	}
 
   	render() {
