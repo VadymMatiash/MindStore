@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "test-server": "mocha test/*.test.js",
+    "test-server": "mocha test/*.test.js --exit",
     "test-client": "npm test --prefix client",
     "test": "concurrently \"npm run test-server\" \"npm run test-client\"",
     "lint-server": "eslint .",
