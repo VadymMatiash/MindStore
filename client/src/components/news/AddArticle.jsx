@@ -124,6 +124,7 @@ class AddArticle extends Component {
 		let arr = [];
 
 		let questionLabel = document.createElement("label");
+		questionLabel.className = "label-question";
 
 		let questionTextarea = document.createElement("textarea");
 		questionTextarea.id = "question";
@@ -138,7 +139,7 @@ class AddArticle extends Component {
 			let i = 0;
 		    while(i < numFields){
 		    	let div = document.createElement('div');
-		    	//div.className = "contTest";
+		    	div.className = "answer-variant";
 		    	let elem = document.createElement('input');
 		    	elem.type = "radio";
 		    	elem.name = `name${this.state.testId}`;
@@ -156,7 +157,7 @@ class AddArticle extends Component {
 			let i = 0;
 		    while(i < numFields){
 		    	let div = document.createElement('div');
-		    	//div.className = "contTest";
+		    	div.className = "answer-variant";
 		    	let elem = document.createElement('input');
 		    	elem.type = "checkbox";
 		    	elem.name = `name${this.state.testId}`;
@@ -192,8 +193,8 @@ class AddArticle extends Component {
   	render() {
 	    return (
 	        <div className="addArticle">
-
-	        	<div>
+				<div className="addArticle__top">
+	        	<div >
 		        	Type name of article <br/>
 		        	<input type = "text" id = "nameArticle"/>
 		        </div>
@@ -202,7 +203,7 @@ class AddArticle extends Component {
 		        	Add tags separated by commas<br/>
 		        	<input type = "text" id = "tagsArticle"/>
 		        </div>
-
+				</div>
 		        <div className = "pad">
 		        	Type content <br/>
 	        		<textarea className ="textarea" id = "contentArticle"/>
@@ -211,11 +212,11 @@ class AddArticle extends Component {
 	        	<div id = "containerTests">
 		        	Create test <br/>
 		        	
-		        	<label>How many answer choices?<input type ="number" id = "numFields"/></label> <br/>
-
-		        	<label>1 answer<input type ="radio" name = "radioTest" value = "opt1" id = "opt1"/></label> <br/>
-		        	<label>>1 answers<input type ="radio" name = "radioTest" value = "opt2" id = "opt2"/></label> <br/>
-
+		        	<label className="d-flex j-space">How many answer choices?<input type ="number" id = "numFields"/></label> <br/>
+					<div className="d-flex label">
+		        		<label className="label-test">1 answer <input type ="radio" name = "radioTest" value = "opt1" id = "opt1"/></label> <br/>
+		        		<label>>1 answers <input type ="radio" name = "radioTest" value = "opt2" id = "opt2"/></label> <br/>
+					</div>
 		        	<button onClick = {this.createTest}>
 	        			Create test
 	        		</button> <br/>
