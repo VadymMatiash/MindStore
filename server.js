@@ -32,7 +32,7 @@ mongoose
 app.use('/api/users', users);
 app.use('/api/articles', acticles);
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 5001;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
