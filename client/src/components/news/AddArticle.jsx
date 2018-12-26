@@ -19,7 +19,7 @@ class AddArticle extends Component {
 
 		let tags = [];
 
-		(tagsArticle.value !== "")? tags = tagsArticle.value.split(','): null;
+		tags = (tagsArticle.value !== "")? tagsArticle.value.split(','): [];
 
 		if(nameArticle.value==0){
 			nameArticle.classList.add('error');
