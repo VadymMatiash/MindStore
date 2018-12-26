@@ -111,7 +111,7 @@ class AddArticle extends Component {
 		console.log('send data');
 		xhr.send(data);
 
-		//window.location.href = "/news";
+		window.location.href = "/news";
 		//this.props.history.push("/news");
 		
 	}

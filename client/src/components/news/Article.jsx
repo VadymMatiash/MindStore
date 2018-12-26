@@ -43,7 +43,7 @@ class Article extends Component {
       	.then((data) => {
       		
       		this.setState({article: data});
-      		console.log(this.state);
+      		// console.log(this.state);
       	})
       .catch("Fail");
 	}
@@ -127,7 +127,7 @@ class Article extends Component {
 			};
 
 			buf._id = this.state.article.tests[i]._id;
-			console.log(buf._id);
+			// console.log(buf._id);
 			buf.correctAnswers = correctAnswers;
 
 			results.push(buf);
@@ -137,7 +137,7 @@ class Article extends Component {
 
 		//xhr.open("POST", 'http://5be832ae8d650800131e2759.mockapi.io/results');
 
-		console.log(`/api/articles/${this.state.article._id}`);
+		// console.log(`/api/articles/${this.state.article._id}`);
 		xhr.open("POST", `/api/articles/${this.state.article._id}`);
 		xhr.setRequestHeader("Content-type", "application/json");
 		xhr.setRequestHeader("Authorization", localStorage.jwtToken);
@@ -150,10 +150,14 @@ class Article extends Component {
 		let data = JSON.stringify({answers: results});
 		this.setState({prevAnswers: results});
 
+		console.log('Test'+xhr.status);
+
 		xhr.onload = () => {
 
   // Process our return data
 		  	if (xhr.status >= 200 && xhr.status < 300) {
+				console.log(xhr.status);
+
 		    // Runs when the request is successful
 		    	this.setState({correctAnswers: JSON.parse(xhr.responseText)});
 
@@ -179,8 +183,8 @@ class Article extends Component {
   		let prevAnswers = this.state.prevAnswers;
   		let correctAnswers = this.state.correctAnswers.correctAnswers;
 
-  		console.log(prevAnswers);
-  		console.log(correctAnswers);
+  		// console.log(prevAnswers);
+  		// console.log(correctAnswers);
 
 	    return (
 	        <div className="article">

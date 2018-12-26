@@ -53,8 +53,8 @@ class News extends Component {
     let generatePages = () => {
      
       let arrPages = [];
-      let i = 0;
-      while(i < pages){
+      let i = 1;
+      while(i < pages+1){
         arrPages.push((<div onClick = {this.handleClick} key = {i} className = "page gradient">{i}</div>));
         i++;
       }
