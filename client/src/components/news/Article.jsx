@@ -34,18 +34,32 @@ class Article extends Component {
 
 	componentDidMount(){
 		let id = this.props.match.params.id;
-		console.log('/api/articles' + id);
-		fetch('/api/articles/'+id)
-    		.then((response) => {
+		//console.log('/api/articles' + id);
 
-        	return response.json();
-      	})
-      	.then((data) => {
-      		
-      		this.setState({article: data});
-      		// console.log(this.state);
-      	})
-      .catch("Fail");
+		let time = 5000;
+
+    	let rec = ()=>{
+			fetch('/api/articles/'+id)
+	    		.then((response) => {
+
+	        	return response.json();
+	      	})
+	      	.then((data) => {
+	      		
+	      		this.setState({article: data});
+	      		// console.log(this.state);
+	      	})
+	        .catch((err)=>{
+          		console.log(err);
+          		time = time*2;
+		          if(time > 360000){
+		            return;
+		          }
+          		setTimeout(rec, time);
+        	});
+    	}
+
+    	rec();
 	}
 
 	displayTests(){
@@ -150,28 +164,43 @@ class Article extends Component {
 		let data = JSON.stringify({answers: results});
 		this.setState({prevAnswers: results});
 
-		console.log('Test'+xhr.status);
+		let time = 0;
 
-		xhr.onload = () => {
+		let myTimer = setInterval(() => {
 
-  // Process our return data
-		  	if (xhr.status >= 200 && xhr.status < 300) {
-				console.log(xhr.status);
+			xhr.onload = () => {console.log(1);
 
-		    // Runs when the request is successful
-		    	this.setState({correctAnswers: JSON.parse(xhr.responseText)});
+			  	if (xhr.status >= 200 && xhr.status < 300) {
+			    // Runs when the request is successful
+			    	this.setState({correctAnswers: JSON.parse(xhr.responseText)});
 
-		    	let textNode = document.createTextNode("Your result: "+this.state.correctAnswers.score + " / "+ 
-		    											this.state.correctAnswers.correctAnswers.length);
-		    	document.getElementsByClassName("article")[0].appendChild(textNode);
+			    	let textNode = document.createTextNode("Your result: "+this.state.correctAnswers.score + " / "+ 
+			    											this.state.correctAnswers.correctAnswers.length);
+			    	document.getElementsByClassName("article")[0].appendChild(textNode);
 
-		    	//console.log(textNode, document.getElementsByClassName("article")[0]);
-		  	} else {
-		    // Runs when it's not
-		    	console.log(xhr.responseText);
-		  	}
+			    	console.log(2);
 
-		};
+			    	clearInterval(myTimer);
+
+			    	//console.log(textNode, document.getElementsByClassName("article")[0]);
+			  	} else {
+
+			  		if(time == 0){
+			  			time = 10000
+			  		}else if(time > 360000){
+			  			clearInterval();
+			  		}
+			  		else{
+			  			time = time * 2;
+			  		}		  		
+			  		console.log(time);
+
+					
+			  	}
+
+			};
+
+		}, time);
 
 		let obj = xhr.send(data);
 

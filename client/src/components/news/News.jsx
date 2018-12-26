@@ -22,18 +22,31 @@ class News extends Component {
   }
 
   componentDidMount() {
-    //fetch('http://5be832ae8d650800131e2759.mockapi.io/articles')
-    fetch('/api/articles')
-    .then((response) => {
 
-        return response.json();
-      })
-      .then((data) => {
-      this.setState({articles: data});
+    let time = 5000;
 
-      })
-      .catch("Fail");
+    let rec = ()=>{
+      console.log(time);
+      fetch('/api/articles')
+      .then((response) => {
 
+          return response.json();
+        })
+        .then((data) => {
+        this.setState({articles: data});
+
+        })
+        .catch((err)=>{
+          console.log(err);
+          time = time*2;
+          if(time > 360000){
+            return;
+          }
+          setTimeout(rec, time);
+        });
+    }
+
+    rec();
 
       //<Article id = {elem.id} title = {elem.title} text = {elem.text} key = {elem.id} tests = {elem.tests} tags = {elem.tags}/>
 

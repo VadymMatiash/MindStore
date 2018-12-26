@@ -45,8 +45,25 @@ class AddArticle extends Component {
 		xhr.setRequestHeader("Content-type", "application/json");
 		xhr.setRequestHeader("Authorization", localStorage.jwtToken);
 
+		let time = 5000;
+
 		xhr.onreadystatechange = function() {
-  			if (this.readyState != 4) return;
+  			if (this.readyState != 4) {
+  				let rec = ()=>{
+			  
+			        time = time*2;
+			        if(time > 360000){
+			            return;
+			        }
+			        setTimeout(rec, time);
+	
+			    }
+    			rec();
+
+    			return;
+  			}
+
+  			
 		}
 
 		let arrChk = document.getElementsByClassName("contTest");		
